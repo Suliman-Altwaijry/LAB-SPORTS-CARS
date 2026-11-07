@@ -1,5 +1,6 @@
 from html.parser import HTMLParser
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 
@@ -10,6 +11,7 @@ from django.urls import reverse
 from PIL import Image
 
 from .data import VEHICLES, SOCIAL_LINKS
+from scripts.build_pages import build_site
 
 
 class Document(HTMLParser):
@@ -38,6 +40,20 @@ class Document(HTMLParser):
 
 class ShowroomTests(SimpleTestCase):
     page_names = ("home", "cars", "genesis", "elantra", "sonata", "about")
+
+    def test_pages_export_works_under_repository_path(self):
+        with TemporaryDirectory() as directory:
+            output = Path(directory)
+            routes = build_site(output, "/LAB-SPORTS-CARS")
+            self.assertEqual(len(routes), 6)
+            home = (output / "index.html").read_text(encoding="utf-8")
+            detail = (output / "cars/hyundai-genesis-coupe/index.html").read_text(encoding="utf-8")
+            self.assertIn('href="/LAB-SPORTS-CARS/cars/"', home)
+            self.assertIn('poster="/LAB-SPORTS-CARS/static/', home)
+            self.assertIn('src="/LAB-SPORTS-CARS/static/videos/elantra-n-hero.mp4"', home)
+            self.assertIn('data-image="/LAB-SPORTS-CARS/static/', detail)
+            self.assertTrue((output / "static/videos/elantra-n-hero.mp4").is_file())
+            self.assertTrue((output / ".nojekyll").is_file())
 
     def test_six_pages_and_all_internal_links_and_static_assets(self):
         documents = {}
