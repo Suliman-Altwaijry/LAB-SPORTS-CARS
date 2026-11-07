@@ -1,6 +1,6 @@
 # LAB-SPORTS-CARS
 
-![Performance Blue Hyundai Elantra N driving through a forest](static/images/editorial/elantra-n-2025-driving.webp)
+![Panoramic view of a Performance Blue Hyundai Elantra N on a forest road at sunset](readme-assets/elantra-n-panorama.webp)
 
 [![Open Site](readme-assets/open-site.svg)](https://suliman-altwaijry.github.io/LAB-SPORTS-CARS/)
 
