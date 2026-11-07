@@ -1,8 +1,8 @@
 # LAB-SPORTS-CARS
 
-![SportsCars banner featuring a red Hyundai Sonata N Line](static/images/editorial/sonata-hangar-rear.webp)
+![Performance Blue Hyundai Elantra N driving through a forest](static/images/editorial/elantra-n-2025-driving.webp)
 
-[![Open Site](https://img.shields.io/badge/Open%20Site-C91116?style=for-the-badge)](https://suliman-altwaijry.github.io/LAB-SPORTS-CARS/)
+[![Open Site](readme-assets/open-site.svg)](https://suliman-altwaijry.github.io/LAB-SPORTS-CARS/)
 
 
 
