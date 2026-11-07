@@ -1,5 +1,9 @@
 # LAB-SPORTS-CARS
 
+![SportsCars banner featuring a red Hyundai Sonata N Line](static/images/editorial/sonata-hangar-rear.webp)
+
+[![Open Site](https://img.shields.io/badge/Open%20Site-C91116?style=for-the-badge)](https://suliman-altwaijry.github.io/LAB-SPORTS-CARS/)
+
 
 
 ## Create a website for a sports cars dealership (SportsCars) , the website should have a home page that looks like the image below , you should :
